@@ -1,7 +1,17 @@
 package br.com.desafio
 
-class Curso(val nome: String, val codigoCurso: Int, val professorTitular: ProfessorTitular, val professorAdjunto: ProfessorAdjunto, val quantidadeMaximaAlunos: Int = 10, var listaAlunos: MutableList<Aluno> = mutableListOf()) {
+class Curso(val nome: String, val codigoCurso: Int, val quantidadeMaximaAlunos: Int) {
 
+    lateinit var professorTitular: ProfessorTitular
+    lateinit var professorAdjunto: ProfessorAdjunto
+    lateinit var listaAlunos: MutableList<Aluno>
+
+    constructor(nome: String, codigoCurso: Int, quantidadeMaximaAlunos: Int, professorTitular: ProfessorTitular, professorAdjunto: ProfessorAdjunto, listaAlunos: MutableList<Aluno>): this(nome, codigoCurso, quantidadeMaximaAlunos) {
+
+        this.professorTitular = professorTitular
+        this.professorAdjunto = professorAdjunto
+        this.listaAlunos = listaAlunos
+    }
 
     override fun equals(other: Any?): Boolean {
 
