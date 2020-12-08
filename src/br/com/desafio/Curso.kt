@@ -35,4 +35,12 @@ class Curso(val nome: String, val codigoCurso: Int, val quantidadeMaximaAlunos: 
         listaAlunos.remove(aluno)
     }
 
+    fun adicionarProfessorTitular(professorTitular: ProfessorTitular){
+        this.professorTitular = professorTitular
+    }
+
+    fun adicionarProfessorAdjunto(professorAdjunto: ProfessorAdjunto){
+        this.professorAdjunto = professorAdjunto
+    }
+
 }
