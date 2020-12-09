@@ -12,6 +12,10 @@ class Aluno(val nome:String, val sobrenome: String, val codigoAluno: Int) {
         return true
     }
 
+    override fun toString(): String {
+        return "'$nome', '$sobrenome', $codigoAluno"
+    }
+
 
 }
 

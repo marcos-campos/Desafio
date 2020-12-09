@@ -4,7 +4,7 @@ class Curso(val nome: String, val codigoCurso: Int, val quantidadeMaximaAlunos: 
 
     lateinit var professorTitular: ProfessorTitular
     lateinit var professorAdjunto: ProfessorAdjunto
-    lateinit var listaAlunos: MutableList<Aluno>
+    var listaAlunos = mutableListOf<Aluno>()
 
     constructor(nome: String, codigoCurso: Int, quantidadeMaximaAlunos: Int, professorTitular: ProfessorTitular, professorAdjunto: ProfessorAdjunto, listaAlunos: MutableList<Aluno>): this(nome, codigoCurso, quantidadeMaximaAlunos) {
 
@@ -42,5 +42,10 @@ class Curso(val nome: String, val codigoCurso: Int, val quantidadeMaximaAlunos: 
     fun adicionarProfessorAdjunto(professorAdjunto: ProfessorAdjunto){
         this.professorAdjunto = professorAdjunto
     }
+
+    override fun toString(): String {
+        return "O curso $nome, de código $codigoCurso, tem quantidade maxima de alunos de $quantidadeMaximaAlunos ."
+    }
+
 
 }

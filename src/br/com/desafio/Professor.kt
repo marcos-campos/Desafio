@@ -11,4 +11,8 @@ open class Professor(val nome: String, val sobrenome: String, var tempoNaEmpresa
         return true
     }
 
+    override fun toString(): String {
+        return "Professor(nome='$nome', sobrenome='$sobrenome', tempoNaEmpresa=$tempoNaEmpresa, codigoProfessor=$codigoProfessor)"
+    }
+
 }
