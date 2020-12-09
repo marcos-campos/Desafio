@@ -68,6 +68,29 @@ fun main() {
     println("")
 
     digitalHouseManager.matricularAluno(3, 20001)
+    println("")
+
+    println(curso1.listaAlunos)
+
+    println(listaMatriculas)
+    println("")
+
+    digitalHouseManager.matricularAluno(2, 20001)
+    println(curso1.listaAlunos)
+    println("")
+    println("")
+
+    digitalHouseManager.matricularAluno(1, 20002)
+    println(curso2.listaAlunos)
+    println("")
+
+    digitalHouseManager.matricularAluno(2, 20002)
+    println(curso2.listaAlunos)
+    println("")
+
+    digitalHouseManager.matricularAluno(3, 20002)
+    println(curso2.listaAlunos)
+    println(curso2.listaAlunos.size)
 
 
 

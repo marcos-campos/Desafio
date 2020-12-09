@@ -23,10 +23,11 @@ class Curso(val nome: String, val codigoCurso: Int, val quantidadeMaximaAlunos: 
     }
 
     fun adicionarAluno(aluno: Aluno): Boolean {
-        if (quantidadeMaximaAlunos <= listaAlunos.size) {
+        if (listaAlunos.size < quantidadeMaximaAlunos) {
             listaAlunos.add(aluno)
             return true
         } else {
+            println("Quantidade maxima de alunos já atingida")
             return false
         }
     }

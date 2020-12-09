@@ -67,22 +67,24 @@ class DigitalHouseManager(var listaAluno: MutableList<Aluno>, var listaProfessor
     fun matricularAluno(codigoAluno: Int, codigoCurso: Int) {
         for (aluno in listaAluno) {
             if (aluno.codigoAluno == (codigoAluno)) {
-                println("Aluno já cadastrado nesse curso")
-            } else {
+
                 for (curso in listaCurso) {
                     if (curso.codigoCurso == (codigoCurso)) {
+
 
                         if (curso.adicionarAluno(aluno)) {
                             val matricula1 = Matricula(aluno, curso, data = Date())
                             listaMatriculas.add(matricula1)
-                            println("Matrícula criada com sucesso")
-
+                            println("Matrícula criada com sucesso do aluno ${aluno.nome} no curso ${curso.nome}")
                         }
+
+
                     }
                 }
             }
         }
     }
+
 
         fun alocarProfessores(codigoCurso: Int, codigoProfessorTitular: Int, codigoProfessorAdjunto: Int) {
 
